@@ -1,0 +1,7 @@
+rev 0
+- initial draft finished
+
+rev 1
+- complete rework of pcb traces
+- changed 100nF caps from 0805 to 0402
+- U3C incorrectly tied away (schematic issue)

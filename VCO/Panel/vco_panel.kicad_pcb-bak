@@ -2,7 +2,7 @@
 
   (general
     (thickness 1.6)
-    (drawings 13)
+    (drawings 14)
     (tracks 0)
     (zones 0)
     (modules 14)
@@ -262,6 +262,9 @@
   )
   (gr_text PW (at 19 -35.5) (layer F.SilkS) (tstamp 6143919C)
     (effects (font (size 2 2) (thickness 0.5)))
+  )
+  (gr_text 8hp (at 37.25 -120.5) (layer Eco2.User)
+    (effects (font (size 1 1) (thickness 0.15)))
   )
   (gr_text SYNC (at 6 -1.25) (layer F.SilkS) (tstamp 61132D1D)
     (effects (font (size 1.5 1.5) (thickness 0.375)))

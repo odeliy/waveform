@@ -464,7 +464,6 @@ $EndComp
 NoConn ~ 6000 4500
 NoConn ~ 4300 4300
 NoConn ~ 8350 5950
-NoConn ~ 7950 5850
 $Comp
 L power:+12V #PWR0114
 U 1 1 61202FED
@@ -1637,7 +1636,7 @@ F 1 "TL074" H 11800 6150 50  0000 C CNN
 F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 11650 6000 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 11750 6100 50  0001 C CNN
 	3    11700 5900
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 $Comp
 L Amplifier_Operational:TL074 U3
@@ -1849,6 +1848,17 @@ F 1 "LM13700" H 8150 6107 50  0000 C CNN
 F 2 "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm" H 7950 5875 50  0001 C CNN
 F 3 "" H 7950 5875 50  0001 C CNN
 	2    8250 5850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0140
+U 1 1 6139B798
+P 7950 5850
+F 0 "#PWR0140" H 7950 5600 50  0001 C CNN
+F 1 "GND" H 7955 5677 50  0000 C CNN
+F 2 "" H 7950 5850 50  0001 C CNN
+F 3 "" H 7950 5850 50  0001 C CNN
+	1    7950 5850
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC

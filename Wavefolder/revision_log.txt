@@ -1,0 +1,11 @@
+rev 0
+- initial draft created
+
+rev 1
+- redo pcb routing
+- remove R22, the 510R resistor in feedback loop of final fold opamp.
+  I kinda monkey-see-monkey-do'd that resistor into the schem. It's
+  not on the original Serge schematic. Maybe it was put there for
+  current limiting, but that isn't needed. I don't think it serves
+  a real purpose so it's gone!
+- added C14 for stability just to be safe
