@@ -1,6 +1,6 @@
 ## VCO
 VCO/fp-info-cache
-VCO/VCO.kicad_pcb.bak
+VCO/VCO.kicad_pcb-bak
 VCO/VCO.sch-bak
 VCO/VCO-cache.lib
 
@@ -23,3 +23,5 @@ Wavefolder/Assembly/Gerbs
 Wavefolder/Assembly/*.csv
 
 desktop.ini
+system_mockup.ai
+system_mockup.pdf

@@ -289,17 +289,6 @@ F 4 " C76473 " H 5000 5050 50  0001 C CNN "JLC #"
 $EndComp
 Text Notes 5150 5250 0    50   ~ 0
 C0G
-$Comp
-L user-symbols:NFET Q2
-U 1 1 611828C8
-P 4650 5050
-F 0 "Q2" H 4500 5300 50  0000 L CNN
-F 1 "J112" H 4450 5200 50  0000 L CNN
-F 2 "user-footprints:TO-92_J112" H 4850 4975 50  0001 L CIN
-F 3 "https://www.onsemi.com/pub/Collateral/MMBFJ113-D.PDF" H 4650 5050 50  0001 L CNN
-	1    4650 5050
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	5000 4900 5000 4800
 Wire Wire Line
@@ -806,19 +795,6 @@ Wire Notes Line
 	7650 4850 7650 1050
 Text Notes 7650 950  0    118  ~ 0
 Waveshaping
-$Comp
-L user-symbols:AudioJack2_PJ301M-12 J?
-U 1 1 612EA020
-P 1800 1450
-AR Path="/61368FFC/612EA020" Ref="J?"  Part="1" 
-AR Path="/612EA020" Ref="J2"  Part="1" 
-F 0 "J2" H 1832 1767 50  0000 C CNN
-F 1 "1V_A" H 1832 1676 50  0000 C CNN
-F 2 "user-footprints:AudioJack_QuPing_Pushfit" H 1800 1450 50  0001 C CNN
-F 3 "" H 1800 1450 50  0001 C CNN
-	1    1800 1450
-	1    0    0    -1  
-$EndComp
 $Comp
 L power:GND #PWR?
 U 1 1 612EA026
@@ -1700,31 +1676,10 @@ Text HLabel 8500 3050 0    50   Input ~ 0
 tri2sqr
 Text Notes 3850 5850 0    50   ~ 0
 Start with sync fully counter-clockwise and then\nrotate clockwise until it sufficiently latches on.
-Text HLabel 2050 6600 2    50   Input ~ 0
-PWM_norm
-Wire Wire Line
-	2050 6600 1950 6600
-Text HLabel 7650 7500 0    50   Input ~ 0
-PWM_norm
-$Comp
-L Graphic:SYM_Arrow_Normal #SYM1
-U 1 1 611E4B89
-P 7050 7500
-F 0 "#SYM1" H 7050 7560 50  0001 C CNN
-F 1 "SYM_Arrow_Normal" H 7060 7450 50  0001 C CNN
-F 2 "" H 7050 7500 50  0001 C CNN
-F 3 "~" H 7050 7500 50  0001 C CNN
-	1    7050 7500
-	1    0    0    -1  
-$EndComp
 Text HLabel 11550 1400 0    50   Input ~ 0
 TRI_norm
 Text HLabel 11550 2200 0    50   Input ~ 0
 SQR_norm
-Text HLabel 8650 7800 2    50   Input ~ 0
-TRI_norm
-Wire Wire Line
-	8650 7800 8550 7800
 $Comp
 L user-symbols:AudioJack2_PJ301M-12 J?
 U 1 1 612EA06A
@@ -1739,106 +1694,6 @@ F 3 "" H 1800 4900 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 NoConn ~ 2000 5000
-$Comp
-L Graphic:SYM_Arrow_Normal #SYM4
-U 1 1 6135F00A
-P 9250 7800
-F 0 "#SYM4" H 9250 7860 50  0001 C CNN
-F 1 "SYM_Arrow_Normal" H 9260 7750 50  0001 C CNN
-F 2 "" H 9250 7800 50  0001 C CNN
-F 3 "~" H 9250 7800 50  0001 C CNN
-	1    9250 7800
-	1    0    0    -1  
-$EndComp
-Text Notes 6700 7500 0    50   ~ 0
-LFO
-Wire Wire Line
-	7750 7600 8550 7600
-Text Notes 8600 7600 0    50   ~ 0
-thru (to Wavefolder & VCF)
-Text Notes 8600 7500 0    50   ~ 0
-thru (to Xfade)
-$Comp
-L Graphic:SYM_Arrow_Normal #SYM2
-U 1 1 611C054F
-P 7050 7600
-F 0 "#SYM2" H 7050 7660 50  0001 C CNN
-F 1 "SYM_Arrow_Normal" H 7060 7550 50  0001 C CNN
-F 2 "" H 7050 7600 50  0001 C CNN
-F 3 "~" H 7050 7600 50  0001 C CNN
-	1    7050 7600
-	1    0    0    -1  
-$EndComp
-Text Notes 6700 7600 0    50   ~ 0
-ENV1
-Wire Notes Line
-	7200 7600 7700 7600
-Wire Notes Line
-	6500 6900 6500 8450
-Wire Notes Line
-	6500 8450 9750 8450
-Wire Notes Line
-	9750 8450 9750 6900
-Wire Notes Line
-	9750 6900 6500 6900
-Text Notes 6500 6850 0    118  ~ 0
-Normalled Bus
-Text Notes 6550 8400 0    50   ~ 0
-Likely to change, just a guess. System from left to right:\nLFO, Envelope(s), VCO, Wavefolder, Xim, VCF, VCA(s), effects, output module.
-Text HLabel 7750 7800 0    50   Input ~ 0
-1V_norm
-Text HLabel 2000 1550 2    50   Input ~ 0
-1V_norm
-Text Notes 6650 7850 0    50   ~ 0
-(prob never used)
-Wire Wire Line
-	7650 7500 7750 7500
-$Comp
-L Connector_Generic:Conn_01x04 J8
-U 1 1 611702B1
-P 7950 7600
-F 0 "J8" H 7900 7900 50  0000 L CNN
-F 1 "Bus_i" H 7800 7800 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 7950 7600 50  0001 C CNN
-F 3 "~" H 7950 7600 50  0001 C CNN
-	1    7950 7600
-	1    0    0    -1  
-$EndComp
-Connection ~ 7750 7500
-Wire Wire Line
-	7750 7500 8550 7500
-$Comp
-L Connector_Generic:Conn_01x04 J9
-U 1 1 61170EEF
-P 8350 7600
-F 0 "J9" H 8300 7900 50  0000 L CNN
-F 1 "Bus_o" H 8200 7800 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 8350 7600 50  0001 C CNN
-F 3 "~" H 8350 7600 50  0001 C CNN
-	1    8350 7600
-	-1   0    0    -1  
-$EndComp
-Text HLabel 8650 7700 2    50   Input ~ 0
-SQR_norm
-Wire Wire Line
-	8650 7700 8550 7700
-$Comp
-L Graphic:SYM_Arrow_Normal #SYM3
-U 1 1 611834AA
-P 9250 7700
-F 0 "#SYM3" H 9250 7760 50  0001 C CNN
-F 1 "SYM_Arrow_Normal" H 9260 7650 50  0001 C CNN
-F 2 "" H 9250 7700 50  0001 C CNN
-F 3 "~" H 9250 7700 50  0001 C CNN
-	1    9250 7700
-	1    0    0    -1  
-$EndComp
-Text HLabel 2000 4100 2    50   Input ~ 0
-FM_norm
-Text HLabel 7750 7700 0    50   Input ~ 0
-FM_norm
-Text Notes 6650 7750 0    50   ~ 0
-(prob never used)
 $Comp
 L user-symbols:LM13700_Alt2 U2
 U 2 1 610FAB36
@@ -1861,4 +1716,44 @@ F 3 "" H 7950 5850 50  0001 C CNN
 	1    7950 5850
 	1    0    0    -1  
 $EndComp
+$Comp
+L Transistor_FET:MMBFJ112 Q2
+U 1 1 618C8992
+P 4650 5050
+F 0 "Q2" H 4450 5350 50  0000 L CNN
+F 1 "MMBFJ112" H 4300 5250 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 4850 4975 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/MMBFJ113-D.PDF" H 4650 5050 50  0001 L CNN
+	1    4650 5050
+	1    0    0    -1  
+$EndComp
+Connection ~ 4450 5050
+$Comp
+L user-symbols:AudioJack2_PJ301M-12 J?
+U 1 1 612EA020
+P 1800 1450
+AR Path="/61368FFC/612EA020" Ref="J?"  Part="1" 
+AR Path="/612EA020" Ref="J2"  Part="1" 
+F 0 "J2" H 1832 1767 50  0000 C CNN
+F 1 "1V_A" H 1832 1676 50  0000 C CNN
+F 2 "user-footprints:AudioJack_QuPing_Pushfit" H 1800 1450 50  0001 C CNN
+F 3 "" H 1800 1450 50  0001 C CNN
+	1    1800 1450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2000 1550 2000 1750
+Wire Wire Line
+	2000 1750 1800 1750
+Connection ~ 1800 1750
+Wire Wire Line
+	2000 4100 2000 4300
+Wire Wire Line
+	2000 4300 1800 4300
+Connection ~ 1800 4300
+Wire Wire Line
+	1950 6600 1950 6800
+Wire Wire Line
+	1950 6800 1750 6800
+Connection ~ 1750 6800
 $EndSCHEMATC

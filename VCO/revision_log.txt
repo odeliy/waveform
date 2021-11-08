@@ -5,3 +5,8 @@ rev 1
 - complete rework of pcb traces
 - changed 100nF caps from 0805 to 0402
 - U3C incorrectly tied away (schematic issue)
+
+rev 2
+- drop normalled bus completely
+- no tht parts
+- change 0402 bypass caps (and C10) to 0603
