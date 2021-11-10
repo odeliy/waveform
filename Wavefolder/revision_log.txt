@@ -9,3 +9,7 @@ rev 1
   current limiting, but that isn't needed. I don't think it serves
   a real purpose so it's gone!
 - added C14 for stability just to be safe
+
+rev 2
+- remove normalled connections
+- no tht parts

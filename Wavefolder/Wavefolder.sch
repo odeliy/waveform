@@ -25,85 +25,6 @@ F 3 "~" H 1700 2500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector_Generic:Conn_01x04 J3
-U 1 1 6115A988
-P 6450 7000
-F 0 "J3" H 6450 7350 50  0000 L CNN
-F 1 "Bus_i" H 6250 7250 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 6450 7000 50  0001 C CNN
-F 3 "~" H 6450 7000 50  0001 C CNN
-	1    6450 7000
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector_Generic:Conn_01x04 J4
-U 1 1 6115AE5B
-P 6900 7000
-F 0 "J4" H 6900 7350 50  0000 L CNN
-F 1 "Bus_o" H 6700 7250 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 6900 7000 50  0001 C CNN
-F 3 "~" H 6900 7000 50  0001 C CNN
-	1    6900 7000
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	6250 6900 7100 6900
-$Comp
-L Graphic:SYM_Arrow_Normal #SYM1
-U 1 1 6115C3A5
-P 5800 6900
-F 0 "#SYM1" H 5800 6960 50  0001 C CNN
-F 1 "SYM_Arrow_Normal" H 5810 6850 50  0001 C CNN
-F 2 "" H 5800 6900 50  0001 C CNN
-F 3 "~" H 5800 6900 50  0001 C CNN
-	1    5800 6900
-	1    0    0    -1  
-$EndComp
-Text Notes 5500 6900 0    50   ~ 0
-LFO
-Text GLabel 6250 7000 0    50   Input ~ 0
-CV_in
-Wire Wire Line
-	7100 7000 6250 7000
-$Comp
-L Graphic:SYM_Arrow_Normal #SYM2
-U 1 1 6116B9CF
-P 5800 7000
-F 0 "#SYM2" H 5800 7060 50  0001 C CNN
-F 1 "SYM_Arrow_Normal" H 5810 6950 50  0001 C CNN
-F 2 "" H 5800 7000 50  0001 C CNN
-F 3 "~" H 5800 7000 50  0001 C CNN
-	1    5800 7000
-	1    0    0    -1  
-$EndComp
-Text Notes 5500 7000 0    50   ~ 0
-ENV
-Text GLabel 6250 7200 0    50   Input ~ 0
-TRI_in
-$Comp
-L Graphic:SYM_Arrow_Normal #SYM3
-U 1 1 6116E4D8
-P 5800 7100
-F 0 "#SYM3" H 5800 7160 50  0001 C CNN
-F 1 "SYM_Arrow_Normal" H 5810 7050 50  0001 C CNN
-F 2 "" H 5800 7100 50  0001 C CNN
-F 3 "~" H 5800 7100 50  0001 C CNN
-	1    5800 7100
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6250 7100 7100 7100
-Text Notes 5500 7100 0    50   ~ 0
-SQR
-Text Notes 7150 6900 0    50   ~ 0
-thru (to xfade)
-Text Notes 7150 7000 0    50   ~ 0
-thru (to VCF)
-Text Notes 7150 7100 0    50   ~ 0
-thru (to xfade)
-Text GLabel 7100 7200 2    50   Input ~ 0
-fold_out
-$Comp
 L Amplifier_Operational:TL074 U1
 U 1 1 611709F9
 P 11100 2200
@@ -124,17 +45,6 @@ F 2 "user-footprints:AudioJack_QuPing_Pushfit" H 3900 6350 50  0001 C CNN
 F 3 "~" H 3900 6350 50  0001 C CNN
 	1    3900 6350
 	-1   0    0    -1  
-$EndComp
-$Comp
-L user_symbols_library:AudioJack2_PJ301M-12 J1
-U 1 1 6119188A
-P 1700 3800
-F 0 "J1" H 1732 4117 50  0000 C CNN
-F 1 "CV_in" H 1732 4026 50  0000 C CNN
-F 2 "user-footprints:AudioJack_QuPing_Pushfit" H 1700 3800 50  0001 C CNN
-F 3 "~" H 1700 3800 50  0001 C CNN
-	1    1700 3800
-	1    0    0    -1  
 $EndComp
 $Comp
 L Device:R R4
@@ -359,14 +269,6 @@ F 3 "" H 1700 2850 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	1700 2850 1700 2800
-Text GLabel 2000 2600 2    50   Input ~ 0
-TRI_in
-Wire Wire Line
-	2000 2600 1900 2600
-Text GLabel 3650 6450 0    50   Input ~ 0
-fold_out
-Wire Wire Line
-	3650 6450 3700 6450
 Text GLabel 4600 1600 2    50   Input ~ 0
 prefold
 Wire Wire Line
@@ -582,12 +484,12 @@ Connection ~ 7300 4950
 $Comp
 L Amplifier_Operational:TL074 U2
 U 5 1 6117BFC9
-P 6550 8300
-F 0 "U2" H 6363 8254 50  0000 R CNN
-F 1 "TL074" H 6363 8345 50  0000 R CNN
-F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 6500 8400 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 6600 8500 50  0001 C CNN
-	5    6550 8300
+P 6150 7550
+F 0 "U2" H 5963 7504 50  0000 R CNN
+F 1 "TL074" H 5963 7595 50  0000 R CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 6100 7650 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 6200 7750 50  0001 C CNN
+	5    6150 7550
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -615,12 +517,12 @@ $EndComp
 $Comp
 L Amplifier_Operational:TL074 U1
 U 5 1 61172AB2
-P 6100 8300
-F 0 "U1" H 5913 8254 50  0000 R CNN
-F 1 "TL074" H 5913 8345 50  0000 R CNN
-F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 6050 8400 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 6150 8500 50  0001 C CNN
-	5    6100 8300
+P 5700 7550
+F 0 "U1" H 5513 7504 50  0000 R CNN
+F 1 "TL074" H 5513 7595 50  0000 R CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 5650 7650 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 5750 7750 50  0001 C CNN
+	5    5700 7550
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -897,78 +799,78 @@ $EndComp
 $Comp
 L Amplifier_Operational:TL072 U3
 U 3 1 6141FE6A
-P 6800 8300
-F 0 "U3" H 6950 8350 50  0000 R CNN
-F 1 "TL072" H 7000 8250 50  0000 R CNN
-F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 6800 8300 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 6800 8300 50  0001 C CNN
-	3    6800 8300
+P 6400 7550
+F 0 "U3" H 6550 7600 50  0000 R CNN
+F 1 "TL072" H 6600 7500 50  0000 R CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 6400 7550 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 6400 7550 50  0001 C CNN
+	3    6400 7550
 	-1   0    0    -1  
 $EndComp
 $Comp
 L power:+12V #PWR0107
 U 1 1 6143CF7B
-P 6000 8000
-F 0 "#PWR0107" H 6000 7850 50  0001 C CNN
-F 1 "+12V" H 6015 8173 50  0000 C CNN
-F 2 "" H 6000 8000 50  0001 C CNN
-F 3 "" H 6000 8000 50  0001 C CNN
-	1    6000 8000
+P 5600 7250
+F 0 "#PWR0107" H 5600 7100 50  0001 C CNN
+F 1 "+12V" H 5615 7423 50  0000 C CNN
+F 2 "" H 5600 7250 50  0001 C CNN
+F 3 "" H 5600 7250 50  0001 C CNN
+	1    5600 7250
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:+12V #PWR0108
 U 1 1 61463B17
-P 6450 8000
-F 0 "#PWR0108" H 6450 7850 50  0001 C CNN
-F 1 "+12V" H 6465 8173 50  0000 C CNN
-F 2 "" H 6450 8000 50  0001 C CNN
-F 3 "" H 6450 8000 50  0001 C CNN
-	1    6450 8000
+P 6050 7250
+F 0 "#PWR0108" H 6050 7100 50  0001 C CNN
+F 1 "+12V" H 6065 7423 50  0000 C CNN
+F 2 "" H 6050 7250 50  0001 C CNN
+F 3 "" H 6050 7250 50  0001 C CNN
+	1    6050 7250
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:+12V #PWR0109
 U 1 1 61463DC3
-P 6900 8000
-F 0 "#PWR0109" H 6900 7850 50  0001 C CNN
-F 1 "+12V" H 6915 8173 50  0000 C CNN
-F 2 "" H 6900 8000 50  0001 C CNN
-F 3 "" H 6900 8000 50  0001 C CNN
-	1    6900 8000
+P 6500 7250
+F 0 "#PWR0109" H 6500 7100 50  0001 C CNN
+F 1 "+12V" H 6515 7423 50  0000 C CNN
+F 2 "" H 6500 7250 50  0001 C CNN
+F 3 "" H 6500 7250 50  0001 C CNN
+	1    6500 7250
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:-12V #PWR0110
 U 1 1 6146455C
-P 6000 8600
-F 0 "#PWR0110" H 6000 8700 50  0001 C CNN
-F 1 "-12V" H 6015 8773 50  0000 C CNN
-F 2 "" H 6000 8600 50  0001 C CNN
-F 3 "" H 6000 8600 50  0001 C CNN
-	1    6000 8600
+P 5600 7850
+F 0 "#PWR0110" H 5600 7950 50  0001 C CNN
+F 1 "-12V" H 5615 8023 50  0000 C CNN
+F 2 "" H 5600 7850 50  0001 C CNN
+F 3 "" H 5600 7850 50  0001 C CNN
+	1    5600 7850
 	-1   0    0    1   
 $EndComp
 $Comp
 L power:-12V #PWR0111
 U 1 1 614650E7
-P 6450 8600
-F 0 "#PWR0111" H 6450 8700 50  0001 C CNN
-F 1 "-12V" H 6465 8773 50  0000 C CNN
-F 2 "" H 6450 8600 50  0001 C CNN
-F 3 "" H 6450 8600 50  0001 C CNN
-	1    6450 8600
+P 6050 7850
+F 0 "#PWR0111" H 6050 7950 50  0001 C CNN
+F 1 "-12V" H 6065 8023 50  0000 C CNN
+F 2 "" H 6050 7850 50  0001 C CNN
+F 3 "" H 6050 7850 50  0001 C CNN
+	1    6050 7850
 	-1   0    0    1   
 $EndComp
 $Comp
 L power:-12V #PWR0112
 U 1 1 61466FEA
-P 6900 8600
-F 0 "#PWR0112" H 6900 8700 50  0001 C CNN
-F 1 "-12V" H 6915 8773 50  0000 C CNN
-F 2 "" H 6900 8600 50  0001 C CNN
-F 3 "" H 6900 8600 50  0001 C CNN
-	1    6900 8600
+P 6500 7850
+F 0 "#PWR0112" H 6500 7950 50  0001 C CNN
+F 1 "-12V" H 6515 8023 50  0000 C CNN
+F 2 "" H 6500 7850 50  0001 C CNN
+F 3 "" H 6500 7850 50  0001 C CNN
+	1    6500 7850
 	-1   0    0    1   
 $EndComp
 $Comp
@@ -1039,8 +941,6 @@ F 3 "" H 2300 4700 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	2800 4800 2700 4800
-Text GLabel 1900 4050 3    50   Input ~ 0
-CV_in
 Wire Wire Line
 	2300 3800 2300 4000
 $Comp
@@ -1056,8 +956,6 @@ F 3 "" H 1700 4200 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	1700 4200 1700 4100
-Wire Wire Line
-	1900 4050 1900 3900
 Connection ~ 2700 4800
 Wire Wire Line
 	3400 4400 3200 4400
@@ -1111,7 +1009,7 @@ U 1 1 6120A799
 P 2850 3400
 F 0 "D1" V 2896 3330 50  0000 R CNN
 F 1 "4148" V 2805 3330 50  0000 R CNN
-F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" V 2850 3400 50  0001 C CNN
+F 2 "Diode_SMD:D_SOD-123" V 2850 3400 50  0001 C CNN
 F 3 "~" V 2850 3400 50  0001 C CNN
 	1    2850 3400
 	0    -1   -1   0   
@@ -1473,34 +1371,34 @@ $EndComp
 $Comp
 L Amplifier_Operational:TL072 U4
 U 3 1 616B3617
-P 7250 8300
-F 0 "U4" H 7400 8350 50  0000 R CNN
-F 1 "TL072" H 7450 8250 50  0000 R CNN
-F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 7250 8300 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 7250 8300 50  0001 C CNN
-	3    7250 8300
+P 6850 7550
+F 0 "U4" H 7000 7600 50  0000 R CNN
+F 1 "TL072" H 7050 7500 50  0000 R CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 6850 7550 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 6850 7550 50  0001 C CNN
+	3    6850 7550
 	-1   0    0    -1  
 $EndComp
 $Comp
 L power:+12V #PWR0123
 U 1 1 616D2474
-P 7350 8000
-F 0 "#PWR0123" H 7350 7850 50  0001 C CNN
-F 1 "+12V" H 7365 8173 50  0000 C CNN
-F 2 "" H 7350 8000 50  0001 C CNN
-F 3 "" H 7350 8000 50  0001 C CNN
-	1    7350 8000
+P 6950 7250
+F 0 "#PWR0123" H 6950 7100 50  0001 C CNN
+F 1 "+12V" H 6965 7423 50  0000 C CNN
+F 2 "" H 6950 7250 50  0001 C CNN
+F 3 "" H 6950 7250 50  0001 C CNN
+	1    6950 7250
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:-12V #PWR0124
 U 1 1 616D2868
-P 7350 8600
-F 0 "#PWR0124" H 7350 8700 50  0001 C CNN
-F 1 "-12V" H 7365 8773 50  0000 C CNN
-F 2 "" H 7350 8600 50  0001 C CNN
-F 3 "" H 7350 8600 50  0001 C CNN
-	1    7350 8600
+P 6950 7850
+F 0 "#PWR0124" H 6950 7950 50  0001 C CNN
+F 1 "-12V" H 6965 8023 50  0000 C CNN
+F 2 "" H 6950 7850 50  0001 C CNN
+F 3 "" H 6950 7850 50  0001 C CNN
+	1    6950 7850
 	-1   0    0    1   
 $EndComp
 $Comp
@@ -1656,16 +1554,6 @@ Text Notes 5400 950  0    118  ~ 0
 8-Stage Folder
 Text Notes 1250 5800 0    118  ~ 0
 Output Processing
-Wire Notes Line
-	5400 6500 7850 6500
-Wire Notes Line
-	7850 6500 7850 7450
-Wire Notes Line
-	7850 7450 5400 7450
-Wire Notes Line
-	5400 7450 5400 6500
-Text Notes 5400 6450 0    118  ~ 0
-Normalled Bus
 $Comp
 L Connector_Generic:Conn_01x10 J7
 U 1 1 61CFBD6A
@@ -1929,44 +1817,6 @@ Wire Notes Line
 	8100 7900 8100 6500
 Text Notes 8100 6450 0    118  ~ 0
 Power Input
-$Comp
-L Device:D_Small_ALT D13
-U 1 1 611F35B1
-P 11100 3800
-F 0 "D13" H 11100 4007 50  0000 C CNN
-F 1 "4148" H 11100 3916 50  0000 C CNN
-F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" V 11100 3800 50  0001 C CNN
-F 3 "~" V 11100 3800 50  0001 C CNN
-	1    11100 3800
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:D_Small_ALT D14
-U 1 1 611F4715
-P 11100 4000
-F 0 "D14" H 11100 3900 50  0000 C CNN
-F 1 "4148" H 11100 4100 50  0000 C CNN
-F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" V 11100 4000 50  0001 C CNN
-F 3 "~" V 11100 4000 50  0001 C CNN
-	1    11100 4000
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	10700 3800 11000 3800
-Wire Wire Line
-	10700 3800 10700 4000
-Wire Wire Line
-	11200 4000 11500 4000
-Wire Wire Line
-	11500 4000 11500 3800
-Wire Wire Line
-	11500 3800 11200 3800
-Connection ~ 11500 4000
-Wire Wire Line
-	11000 4000 10700 4000
-Connection ~ 10700 4000
-Wire Wire Line
-	10700 4000 10700 4250
 $Comp
 L Transistor_BJT:MMBT3904 Q1
 U 1 1 612062EF
@@ -2357,10 +2207,6 @@ Wire Wire Line
 Wire Wire Line
 	11500 1350 11500 1700
 Connection ~ 11500 1700
-Text Notes 600  9250 0    118  ~ 0
-Based on designs by Serge Tcherepnin, and Ken Stone.
-Wire Wire Line
-	11500 4000 11500 4250
 $Comp
 L Device:C C14
 U 1 1 61505A36
@@ -2382,4 +2228,55 @@ Wire Wire Line
 Connection ~ 10700 4250
 Wire Wire Line
 	10700 4250 10700 4450
+Wire Wire Line
+	1900 2600 1900 2800
+Wire Wire Line
+	1900 2800 1700 2800
+Connection ~ 1700 2800
+$Comp
+L user_symbols_library:AudioJack2_PJ301M-12 J1
+U 1 1 6119188A
+P 1700 3800
+F 0 "J1" H 1732 4117 50  0000 C CNN
+F 1 "CV_in" H 1732 4026 50  0000 C CNN
+F 2 "user-footprints:AudioJack_QuPing_Pushfit" H 1700 3800 50  0001 C CNN
+F 3 "~" H 1700 3800 50  0001 C CNN
+	1    1700 3800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1900 3900 1900 4200
+Wire Wire Line
+	1900 4200 1700 4200
+Connection ~ 1700 4200
+$Comp
+L user_symbols_library:BAV99_Alt D13
+U 1 1 618F308E
+P 11250 3800
+F 0 "D13" V 11000 3800 50  0000 L CNN
+F 1 "BAV99" V 11100 3750 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 11250 3300 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/BAV99_SER.pdf" H 11250 3800 50  0001 C CNN
+F 4 "C29718" H 11250 3800 50  0001 C CNN "Part Ref"
+	1    11250 3800
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	10700 3800 10700 4250
+Wire Wire Line
+	11500 3800 11500 4250
+Wire Wire Line
+	11350 3800 11500 3800
+Wire Wire Line
+	10900 3900 10800 3900
+Wire Wire Line
+	10800 3900 10800 3800
+Wire Wire Line
+	10800 3800 10700 3800
+Wire Wire Line
+	10900 3700 10800 3700
+Wire Wire Line
+	10800 3700 10800 3800
+Connection ~ 10800 3800
+NoConn ~ 3700 6450
 $EndSCHEMATC

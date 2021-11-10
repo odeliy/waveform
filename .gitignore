@@ -19,7 +19,8 @@ Wavefolder/Panel/fp-lib-table
 Wavefolder/Panel/wavefolder_panel.pro
 
 ## Wavefolder > Assembly
-Wavefolder/Assembly/Gerbs
+Wavefolder/Assembly/Gerbs_Wavefolder
+Wavefolder/Assembly/Gerbs_Wavefolder.zip
 Wavefolder/Assembly/*.csv
 
 desktop.ini
