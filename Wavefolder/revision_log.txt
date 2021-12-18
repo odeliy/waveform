@@ -13,3 +13,6 @@ rev 1
 rev 2
 - remove normalled connections
 - no tht parts
+
+rev 3
+- added bandlimiting caps (C15,C16)

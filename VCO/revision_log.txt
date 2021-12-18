@@ -10,3 +10,7 @@ rev 2
 - drop normalled bus completely
 - no tht parts
 - change 0402 bypass caps (and C10) to 0603
+
+rev 3
+- added bandlimiting caps to amplifier stages (C11,C12,C13)
+- change RV5 to 20KT & R1 to 91K, better 1v/oct calibration range
