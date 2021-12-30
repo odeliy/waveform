@@ -10,3 +10,8 @@ rev 2
 - drop normalled bus completely
 - no tht parts
 - change 0402 bypass caps (and C10) to 0603
+
+v1.3
+- change to PJ301BM jacks
+- change 1V trimmer res combo to 20KT and 91K
+- flipped trimmers to "circuit side"

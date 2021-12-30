@@ -13,3 +13,9 @@ rev 1
 rev 2
 - remove normalled connections
 - no tht parts
+
+v1.3
+- added trimmer for VCA "bridge", nulls cv bleedthrough
+- replaced discrete Q1 & Q2 w/ monolithic pair
+- changed to PJ301BM Jacks
+- removed 20K resistor from RV2 to ground. 20K was too big and folded some signals even when fold was minimized. Removing it all together will add full cut capability and allow for any sized input signal to be used.

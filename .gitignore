@@ -3,26 +3,20 @@ VCO/fp-info-cache
 VCO/VCO.kicad_pcb-bak
 VCO/VCO.sch-bak
 VCO/VCO-cache.lib
-
-## VCO > Assembly
-VCO/Assembly/Gerbs
+VCO/Ignore
+VCO/Assembly
+VCO/VCO-backups
+VCO/VCO.kicad_prl
 
 ## Wavefolder
 Wavefolder/fp-info-cache
 Wavefolder/Wavefolder.kicad_pcb-bak
 Wavefolder/Wavefolder.sch-bak
 Wavefolder/Wavefolder-cache.lib
+Wavefolder/Ignore
+Wavefolder/Assembly
+Wavefolder/Wavefolder-backups
+Wavefolder/Wavefolder_prl
 
-## Wavefolder > Panel
-Wavefolder/Panel/fp-info-cache
-Wavefolder/Panel/fp-lib-table
-Wavefolder/Panel/wavefolder_panel.pro
-
-## Wavefolder > Assembly
-Wavefolder/Assembly/Gerbs_Wavefolder
-Wavefolder/Assembly/Gerbs_Wavefolder.zip
-Wavefolder/Assembly/*.csv
-
+## MISC
 desktop.ini
-system_mockup.ai
-system_mockup.pdf
